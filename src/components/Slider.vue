@@ -3,7 +3,7 @@
     <b-carousel
       id="stage-carousel"
       v-model="slide"
-      :interval="0"
+      :interval="4000"
       fade
       controls
       indicators
@@ -47,9 +47,6 @@ export default {
     BButton,
     BCarousel,
   },
-  mounted() {
-    this.startSlide();
-  },
   methods: {
     onSlideStart() {
       this.sliding = true;
@@ -57,7 +54,6 @@ export default {
     onSlideEnd() {
       this.sliding = false;
     },
-    parseCarouselText() {},
   },
 };
 </script>
@@ -143,7 +139,7 @@ export default {
     height: 600px;
   }
   .carousel-caption {
-    top: 220px;
+    top: 200px;
   }
   .carousel-caption h3 {
     font-size: 2.125rem;

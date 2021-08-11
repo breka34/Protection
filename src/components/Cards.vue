@@ -9,35 +9,60 @@
         velit esse cillum dolore eu fugiat nulla pariatur.
       </div>
     </div>
+    <div class="category__headline">
+      <h3>Kategorije proizvoda</h3>
+    </div>
     <div class="cards">
-      <div class="card" v-for="data in json" :key="data.id">
-        <div class="card-img"><img src="../images/kamir3.png" alt="" /></div>
-        <div class="card-description">
-          <div class="card-title">{{ data.title }}</div>
-          <div class="card-desc">
-            <p>{{ data.desc }}</p>
-          </div>
-          <div class="card-btn">
-            <button>{{ data.button }}</button>
-          </div>
-        </div>
-      </div>
+      <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper-slide v-for="data in mainCategories" :key="data.id">
+          <Card :card="data" />
+        </swiper-slide>
+      </swiper>
+      <div class="swiper-pagination" slot="pagination"></div>
+      <div class="swiper-button-prev" slot="button-prev"></div>
+      <div class="swiper-button-next" slot="button-next"></div>
     </div>
   </div>
 </template>
 
 <script>
-import json from "../assets/json.json";
+import mainCategories from "../assets/mainCategories.json";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import Card from "./Card.vue";
 export default {
   data() {
     return {
-      json,
+      mainCategories,
+      swiperOptions: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        watchOverflow: true,
+        centerInsufficientSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          275: {
+            slidesPerView: "auto",
+          },
+        },
+      },
     };
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
+    Card,
   },
 };
 </script>
 
-<style>
+<style scoped>
 .card-description {
   border: 1px solid rgb(255, 0, 0);
 }
@@ -47,6 +72,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.category__headline {
+  padding: 48px 12px 12px;
 }
 .cards-up-text {
   width: 100%;
@@ -61,89 +90,13 @@ export default {
   margin: 0 auto;
 }
 .cards {
-  /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin: 48px auto;
-}
-.card {
-  flex: 0 0 500px;
-  align-self: auto;
-
-  margin: 10px;
-}
-.card-img img {
-  width: 100%;
-  height: 250px;
-}
-.card-title {
-  padding: 12px;
-  background: #dd3333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 21px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.card-btn button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #dd3333;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 12px;
-}
-.card-btn button:hover {
-  background: #b20000;
-}
-.card-desc {
-  min-height: 100px; /* overrides height and max-height */
-  height: 130px;
-  max-height: 200px;
-  width: 100%;
-  /* height: 130px; */
-  display: flex;
-  justify-content: center;
-}
-.card-desc p {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 20px;
-  width: 90%;
-}
-/* media queries */
-@media only screen and (max-device-width: 1024px) {
-  .card {
-    flex: 0 0 350px;
-  }
-  .card-desc {
-    height: 200px;
-  }
-}
-@media only screen and (max-width: 368px) {
-  .card {
-    flex: 0 0 300px;
-  }
-}
-@media only screen and (min-device-width: 368px) and (max-device-width: 480px) {
-  .card {
-    flex: 0 0 350px;
-  }
-  .card-desc {
-    height: 160px;
-  }
-  .card-desc p {
-    line-height: 18px;
-  }
-  .card-img img {
-    height: 200px;
-  }
+  margin: 12px auto;
+  max-width: 100%;
+  position: relative;
+  padding: 12px 48px;
 }
 </style>
