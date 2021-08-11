@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Videonadzor<div class='separate'></div>",
+        "header": "Hikvision sustavi nadzora" ,
+        "image": "hik_stage.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Evidencija radnog vremena<div class='separate'></div>",
+        "header": "Touchscreen terminali<br>Evidencija na otisak prsta",
+        "image": "jantar_stage.jpg" 
+    },
+    {
+        "id": 3,
+        "name": "Protuprovala<div class='separate'></div>",
+        "header": "Paradox Insight",
+        "image": "paradox_stage.jpg"
+    }
+]
