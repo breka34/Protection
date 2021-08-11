@@ -1,8 +1,8 @@
 <template>
   <div class="news-container">
-   <div class="latest-news">
-        <h3>Latest news</h3>
-   </div>
+    <div class="latest-news">
+      <h3>Latest news</h3>
+    </div>
     <div class="news-cards">
       <div class="news-card" v-for="item in news" :key="item.id">
         <div class="news-img">
@@ -13,7 +13,7 @@
             <h2>{{ item.title }}</h2>
           </div>
           <div class="news-desc">
-              <span>{{ item.desc }}</span>
+            <span>{{ item.desc }}</span>
           </div>
           <div class="news-btn">
             <button>{{ item.button }}</button>
@@ -21,7 +21,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -42,43 +41,36 @@ export default {
   background: rgba(128, 128, 128, 0.795);
   border: none;
   color: #fff;
-  height: 35px;
-  font-size: 16px;
+  padding: 12px;
+  font-size: 18px;
 }
 .news-title h2 {
-    color: #dd3333;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 3px;
+  color: #dd3333;
+  font-size: 18px;
+  font-weight: 700;
 }
 .latest-news {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 .latest-news:before {
-  content : "";
+  content: "";
   position: absolute;
-  left    :60;
-  bottom  : 35px;
-  height  : 1px;
-  width   : 220px;  
-border-bottom: 2px solid red;
+  left: 60;
+  bottom: 35px;
+  height: 1px;
+  width: 220px;
+  border-bottom: 2px solid red;
 }
 .news-container {
-    width: 100%;
+  width: 100%;
 }
 .news-cards {
-     /* width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
-  justify-content: center;
- grid-gap: 30px; */
- width: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -90,19 +82,16 @@ border-bottom: 2px solid red;
 }
 
 .news-img img {
-width: 100%;
+  width: 100%;
 }
 /* media */
 
-
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
-.news-cards {
-  display: grid;
-  grid-template-columns: repeat(1, 300px);
-  justify-content: center;
- grid-gap: 20px;
+  .news-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+    grid-gap: 20px;
+  }
 }
-}
-
 </style>
