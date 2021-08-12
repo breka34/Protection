@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="position: relative">
     <!-- <Nav /> -->
     <Navigation />
     <Slider />
@@ -35,7 +35,7 @@ export default {
   font-size: 16px;
 }
 .swiper-container {
-  max-width: 1344px;
+  max-width: 1250px;
 }
 .cards .swiper-slide {
   max-width: 400px;

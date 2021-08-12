@@ -79,12 +79,12 @@ export default {
 }
 .cards-up-text {
   width: 100%;
-  background-color: #6c757d;
+  background-color: rgba(211, 211, 211, 0.4);
 }
 .headline__text {
   max-width: 900px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 400;
+  /* color: #fff; */
   padding: 12px;
   text-align: center;
   margin: 0 auto;

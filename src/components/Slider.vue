@@ -65,6 +65,10 @@ export default {
 .slider-container .img-fluid {
   height: 300px;
 }
+.slider-container .carousel {
+  width: 100%;
+  margin: 0 auto;
+}
 .slider {
   width: 100%;
   /* height: 100%; */
@@ -149,6 +153,11 @@ export default {
   .carousel-caption p {
     font-size: 2.5rem;
     line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1344px) {
+  .slider-container .carousel {
+    max-width: 1344px;
   }
 }
 </style>

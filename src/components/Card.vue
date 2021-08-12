@@ -29,6 +29,8 @@ export default {
 <style scoped>
 .card {
   max-width: 400px;
+  box-shadow: 0 2px 9px 0 rgb(0 0 0/15%);
+  margin: 24px 0px;
 }
 .card-desc {
   padding: 12px;
