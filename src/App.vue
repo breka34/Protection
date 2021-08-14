@@ -5,6 +5,7 @@
     <Slider />
     <Cards />
     <News />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Navigation from "./components/Navigation.vue";
 import Slider from "./components/Slider.vue";
 import Cards from "./components/Cards.vue";
 import News from "./components/News.vue";
+import Footer from './components/Footer.vue'
 export default {
   name: "App",
   components: {
@@ -21,6 +23,7 @@ export default {
     Slider,
     Cards,
     News,
+    Footer
     // Nav,
   },
 };
@@ -32,7 +35,7 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 .swiper-container {
   max-width: 1250px;
