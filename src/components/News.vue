@@ -1,5 +1,5 @@
 <template>
-  <div class="content__width">
+  <div class="content__width" id="news_section">
     <div class="news_container">
       <div class="news_headline__container">
         <h3>Novosti</h3>

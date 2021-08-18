@@ -2,9 +2,7 @@
   <div id="app" style="position: relative">
     <!-- <Nav /> -->
     <Navigation />
-    <Slider />
-    <Cards />
-    <News />
+    <router-view> </router-view>
     <Footer />
   </div>
 </template>
@@ -12,18 +10,12 @@
 <script>
 // import Nav from './components/Nav.vue'
 import Navigation from "./components/Navigation.vue";
-import Slider from "./components/Slider.vue";
-import Cards from "./components/Cards.vue";
-import News from "./components/News.vue";
-import Footer from './components/Footer.vue'
+import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
     Navigation,
-    Slider,
-    Cards,
-    News,
-    Footer
+    Footer,
     // Nav,
   },
 };

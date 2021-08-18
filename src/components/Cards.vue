@@ -9,7 +9,7 @@
         velit esse cillum dolore eu fugiat nulla pariatur.
       </div>
     </div>
-    <div class="category__headline">
+    <div class="category__headline" id="category_section">
       <h3>Kategorije proizvoda</h3>
     </div>
     <div class="cards">
