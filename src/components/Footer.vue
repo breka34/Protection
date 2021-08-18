@@ -1,16 +1,14 @@
-
-<!--  Samo ti meni napisi sta bi trebao jos, tj jesam trebao nesto povući s boostrapa ili,
- pa cu se ja igrati ako se imam kad igrat :D -->
-
 <template>
-    <footer class="footer ">
+    <footer  class="footer"
+     v-match-heights="{
+      el: ['.footer'],
+    }">
+        <div class="footer-center">
         <div class="footer-contact">
-                <h4>Kontakt</h4>
-            <p>  <b-icon-signpost-fill class="b-icon" /> Široki Brijeg, BiH</p>
-            <div class="contact-footer">
-                <p>  <b-icon-telephone class="b-icon" /> + 63 000 111</p>
-                <p> <b-icon-envelope class="b-icon" /> kamir@gmail.com</p>
-            </div>
+                 <h4>Kontakt</h4>
+                <p> <b-icon-signpost class="b-icon"></b-icon-signpost> Široki Brijeg, BiH</p>
+                <p><b-icon-telephone class="b-icon"></b-icon-telephone> + 63 *** ***</p>
+                <p><b-icon-envelope class="b-icon"></b-icon-envelope> kamir@gmail.com</p>
         </div>
         <div class="footer-products">
             <h4>Proizvodi</h4>
@@ -23,8 +21,10 @@
             </ul>
         </div>
          <div class="footer-company">
+             <h4>Informacije</h4>
             <p>Vijesti</p>
             <p>O nama</p>
+        </div>
         </div>
    </footer>
 </template>
@@ -35,22 +35,30 @@
     }
 </script>
 
-<style >
-@media only screen and (max-width: 680px) {
-.footer-contact , .footer-products{
-border-bottom: 1px solid rgba(128, 128, 128, 0.767);
-margin: 6px;
-/* padding: 3px; */
+<style scoped>
+.footer-center {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+
 }
-.footer-company {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.767);
+@media only screen and (max-width: 680px) {
+     .footer-center {
+        flex-direction: column;
+    }
+.footer-contact , .footer-products, .footer-company{
+border-bottom: 1px solid rgba(128, 128, 128, 0.767);
+/* margin: 6px; */
+/* padding: 3px; */
 }
 }
  .footer-products, .footer-contact,  .footer-company{
-        width: 200px;
+        /* width: 200px; */
+        padding: 8px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         border-right: 1px solid rgba(128, 128, 128, 0.767);
 } 
 .b-icon {
@@ -73,12 +81,12 @@ ul {
     background: #000000;
    width: 100%;
    padding: 10px;
-    min-height: 400px;
+    /* min-height: 400px; */
     color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 </style>

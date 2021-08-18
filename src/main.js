@@ -4,16 +4,18 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import {
     BootstrapVue,
     IconsPlugin,
-    telephone,
-    signpostfill,
-    envelope
+    BIconSignpost,
+    BIconTelephone,
+    BIconEnvelope,
+
 } from "bootstrap-vue";
 import VueMatchHeights from "vue-match-heights";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-
 import "swiper/css/swiper.css";
-Vue.component(telephone, signpostfill, envelope)
+Vue.component('BIconSignpost', BIconSignpost);
+Vue.component('BIconTelephone', BIconTelephone)
+Vue.component('BIconEnvelope', BIconEnvelope);
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
