@@ -9,16 +9,16 @@
       <div class="footer-contact">
         <h4>Kontakt</h4>
         <div class="foot-contact">
-          <p>
-            <b-icon-signpost class="b-icon"></b-icon-signpost> Široki Brijeg,
+          <div>
+            <b-icon-signpost class="b-icon contact"></b-icon-signpost> Široki Brijeg,
             BiH
-          </p>
-          <p>
-            <b-icon-telephone class="b-icon"></b-icon-telephone> + 63 *** ***
-          </p>
-          <p>
-            <b-icon-envelope class="b-icon"></b-icon-envelope> kamir@gmail.com
-          </p>
+          </div>
+          <div>
+            <b-icon-telephone class="b-icon contact"></b-icon-telephone> + 63 *** ***
+          </div>
+          <div>
+            <b-icon-envelope class="b-icon contact"></b-icon-envelope> kamir@gmail.com
+          </div>
         </div>
       </div>
       <div class="footer-products">
@@ -34,8 +34,8 @@
       <div class="footer-company">
         <h4>Informacije</h4>
         <div class="info">
-          <p>Vijesti</p>
-          <p>O nama</p>
+          <div>Vijesti</div>
+          <div>O nama</div>
         </div>
       </div>
     </div>
@@ -105,14 +105,20 @@ export default {};
         padding: 3px;
         border-right: 1px solid rgba(128, 128, 128, 0.767);
 }  */
-.b-icon {
-  color: rgba(128, 128, 128, 0.993);
+.b-icon.contact svg {
+  /* fill: #fff; */
+  height: 22px !important;
+  width: 22px !important;
 }
 
 .footer-products ul li,
-p {
-  font-size: 18px;
+.foot-contact div,
+.info div {
+  font-size: 15px;
   /* line-height: 30px; */
+}
+.foot-contact div {
+  padding: 3px 0px;
 }
 ul {
   list-style-type: none;
