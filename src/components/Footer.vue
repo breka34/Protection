@@ -1,6 +1,7 @@
 <template>
   <footer
     class="footer"
+    :sticky="true"
     v-match-heights="{
       el: ['.footer'],
     }"
@@ -10,14 +11,16 @@
         <h4>Kontakt</h4>
         <div class="foot-contact">
           <div>
-            <b-icon-signpost class="b-icon contact"></b-icon-signpost> Široki Brijeg,
-            BiH
+            <b-icon-signpost class="b-icon contact"></b-icon-signpost> Široki
+            Brijeg, BiH
           </div>
           <div>
-            <b-icon-telephone class="b-icon contact"></b-icon-telephone> + 63 *** ***
+            <b-icon-telephone class="b-icon contact"></b-icon-telephone> + 63
+            *** ***
           </div>
           <div>
-            <b-icon-envelope class="b-icon contact"></b-icon-envelope> kamir@gmail.com
+            <b-icon-envelope class="b-icon contact"></b-icon-envelope>
+            kamir@gmail.com
           </div>
         </div>
       </div>
@@ -49,7 +52,7 @@ export default {};
 <style scoped>
 @media only screen and (min-width: 1344px) {
   .b-icon {
-    font-size: 28px;
+    font-size: 21px;
   }
   .foot-contact,
   ul,
@@ -132,5 +135,14 @@ ul {
   padding: 10px;
   /* min-height: 400px; */
   color: #fff;
+  position: relative;
+  bottom: unset;
+}
+
+@media screen and (min-width: 681px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 </style>

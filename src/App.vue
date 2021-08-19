@@ -3,12 +3,13 @@
     <!-- <Nav /> -->
     <Navigation />
     <router-view> </router-view>
-    <Footer />
+    <div class="footer__container">
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-// import Nav from './components/Nav.vue'
 import Navigation from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
 export default {
@@ -16,7 +17,6 @@ export default {
   components: {
     Navigation,
     Footer,
-    // Nav,
   },
 };
 </script>
@@ -27,7 +27,20 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  /* font-size: 16px; */
+}
+html,
+body {
+  height: 100%;
+}
+#app {
+  min-height: 100vh;
+}
+.footer__container {
+  min-height: 143px;
+}
+
+.form__container .d-block {
+  font-size: 15px;
 }
 .swiper-container {
   max-width: 1250px;
