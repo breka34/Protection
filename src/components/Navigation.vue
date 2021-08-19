@@ -34,13 +34,18 @@
       </div>
 
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content> User </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown>
+      <b-navbar-nav class="ml-auto login_register">
+        <template v-if="signedIn">
+          <b-nav-item-dropdown right>
+            <!-- Using 'button-content' slot -->
+            <template #button-content> User </template>
+            <b-dropdown-item href="#">Profile</b-dropdown-item>
+            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+          </b-nav-item-dropdown>
+        </template>
+        <template>
+          <b-nav-item :to="'/login'">Prijava / Registracija</b-nav-item>
+        </template>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -50,6 +55,11 @@
 export default {
   name: "Navigation",
   components: {},
+  data() {
+    return {
+      signedIn: false,
+    };
+  },
 };
 </script>
 
@@ -66,9 +76,17 @@ export default {
   padding-left: 24px;
 }
 .navbar-light .main_nav_bar .navbar-nav .nav-link,
-.navbar-light .main_nav_bar .navbar-nav .nav-link span {
-  font-size: 18px;
+.navbar-light .main_nav_bar .navbar-nav .nav-link span,
+.navbar-light .navbar-nav.login_register .nav-link {
+  font-size: 16px;
   font-weight: 400;
   color: #262626;
+}
+@media screen and (max-width: 1100px) and (min-width: 1024px) {
+  .navbar-light .main_nav_bar .navbar-nav .nav-link,
+  .navbar-light .main_nav_bar .navbar-nav .nav-link span,
+  .navbar-light .navbar-nav.login_register .nav-link {
+    font-size: 13px;
+  }
 }
 </style>
