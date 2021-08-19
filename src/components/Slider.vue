@@ -100,7 +100,7 @@ export default {
 }
 .carousel-caption p {
   font-size: 1.5rem;
-  line-height: 48px;
+  line-height: 29px;
 }
 .separate {
   max-width: 100px;

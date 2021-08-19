@@ -55,7 +55,7 @@ export default {
 .news_container {
   max-width: 1024px;
   margin: 48px auto;
-  padding-bottom: 24px;
+  padding: 24px;
 }
 .news_container .card-header.p-1 {
   background-color: #fff;
