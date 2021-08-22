@@ -19,7 +19,7 @@
           </b-nav-item-dropdown>
           <b-nav-item href="#">Vijesti</b-nav-item>
           <b-nav-item href="#">O nama</b-nav-item>
-          <b-nav-item href="#footer_section">Kontakt</b-nav-item>
+          <b-nav-item  href="#footer_section" :to="'/contact'">Kontakt</b-nav-item>
           <b-nav-form>
             <b-form-input
               size="sm"

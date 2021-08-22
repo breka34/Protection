@@ -3,6 +3,7 @@
     <Slider />
     <Cards />
     <News />
+    
   </div>
 </template>
 
